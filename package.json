@@ -1,0 +1,51 @@
+{
+  "name": "mesertmongoapi",
+  "version": "1.0.0",
+  "description": "Just a basement for mongo based APIs",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "SET NODE_ENV=testing && jest --runInBand --forceExit --silent",
+    "dev": "nodemon --exec npm run restart",
+    "restart": "rimraf dist && npm run build && npm run start",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brookmg/meseret_mongo_api.git"
+  },
+  "keywords": [
+    "meseret",
+    "mongodb",
+    "api",
+    "mongoose"
+  ],
+  "author": "Brook Mezgebu <brook.mezgebu.dev@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/brookmg/meseret_mongo_api/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "request-promise": "^4.2.6",
+    "uuid": "^8.3.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "homepage": "https://github.com/brookmg/meseret_mongo_api#readme"
+}
